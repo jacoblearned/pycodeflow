@@ -1,0 +1,12 @@
+- repo: local
+  hooks:
+    - id: fmt
+      name: Black
+      entry: invoke fmt
+      language: system
+      types: [python]
+    - id: lint
+      name: Pylint
+      entry: invoke lint
+      language: system
+      types: [python]
