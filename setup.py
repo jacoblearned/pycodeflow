@@ -1,11 +1,14 @@
+""" Setup info and logic """
+
 import os
 from setuptools import find_packages, setup
 from pycodeflow import NAME, VERSION, DESC, AUTHOR, AUTHOR_EMAIL, URL, LICENSE
 
 
 def read(fname):
-    with open(os.path.join(os.path.dirname(__file__), fname)) as f:
-        return f.read()
+    """ Return the contents of the given filename """
+    with open(os.path.join(os.path.dirname(__file__), fname)) as content:
+        return content.read()
 
 
 setup(
@@ -16,6 +19,7 @@ setup(
     description=DESC,
     long_description=read("README.md"),
     license=LICENSE,
+    url=URL,
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
