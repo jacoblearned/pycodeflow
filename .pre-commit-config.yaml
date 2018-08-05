@@ -1,12 +1,12 @@
 - repo: local
   hooks:
-    - id: fmt
-      name: Black
-      entry: invoke fmt
+    - id: lint
+      name: Lint
+      entry: pipenv run pylint --disable=duplicate-code pycodeflow tasks.py setup.py
       language: system
       types: [python]
-    - id: lint
-      name: Pylint
-      entry: invoke lint
+    - id: fmt
+      name: Black
+      entry: pipenv run black pycodeflow tests tasks.py setup.py
       language: system
       types: [python]
