@@ -9,6 +9,8 @@ name = "pypi"
 twine = ">=1.11.0"
 black =  { version = "==18.6b4", markers="python_version >= '3.6'" }
 pylint = { version = "*", markers="python_version >= '3.6'" }
+astroid = { version = "*", markers="python_version >= '3.6'" }
+isort = { version = "*", markers="python_version >= '3.6'" }
 pytest = ">=3.7.1"
 pre-commit = ">=1.10.4"
 invoke = ">=1.1.1"
