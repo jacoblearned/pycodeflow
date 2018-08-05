@@ -24,7 +24,7 @@ def lint(ctx):
 @task
 def unit_test(ctx):
     """ Run unit tests """
-    ctx.run("pipenv run pytest --cov=pycodeflow tests/")
+    ctx.run("pipenv run pytest --cov-report term-missing --cov=pycodeflow tests/")
 
 
 @task
