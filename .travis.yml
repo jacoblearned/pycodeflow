@@ -1,0 +1,17 @@
+language: python
+sudo: false
+
+python:
+  - '3.7'
+  - '3.6'
+  - '3.5'
+  - '3.4'
+  - '3.3'
+  - '2.7'
+
+install: pip install invoke pipenv
+
+script:
+  - invoke fmt
+  - invoke lint
+  - invoke unit-test --setup --version $TRAVIS_PYTHON_VERSION
