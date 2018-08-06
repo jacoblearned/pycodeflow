@@ -7,3 +7,9 @@ AUTHOR = "Jacob Learned"
 AUTHOR_EMAIL = "jacobmlearned@gmail.com"
 URL = "https://github.com/jacoblearned/pycodeflow"
 LICENSE = "MIT"
+
+ENVIRONMENT_VARIABLES = (
+    "PYCODEFLOW_ENABLED",
+    "PYCODEFLOW_SCENARIO",
+    "PYCODEFLOW_OUTPUT_DIR",
+)
