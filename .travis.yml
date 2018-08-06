@@ -12,6 +12,7 @@ python:
 install: pip install invoke pipenv
 
 script:
-  - invoke fmt
-  - invoke lint
-  - invoke unit-test --setup --version $TRAVIS_PYTHON_VERSION
+  - invoke setup --skip-lock --version $TRAVIS_PYTHON_VERSION
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.7' ]]; then invoke fmt; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.7' ]]; then invoke lint; fi
+  - invoke unit-test
