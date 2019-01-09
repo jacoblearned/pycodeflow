@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 
 [dev-packages]
+requests = ">=2.20.0"
+pyyaml = ">=4.2b1"
 twine = ">=1.11.0"
 pytest = ">=3.7.1"
 pytest-cov = ">=2.5.1"
