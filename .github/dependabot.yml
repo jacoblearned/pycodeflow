@@ -1,0 +1,36 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: astroid
+    versions:
+    - 2.4.2
+    - "2.5"
+    - 2.5.1
+    - 2.5.2
+    - 2.5.3
+  - dependency-name: pre-commit
+    versions:
+    - 2.10.0
+    - 2.10.1
+    - 2.11.0
+    - 2.11.1
+    - 2.12.0
+  - dependency-name: twine
+    versions:
+    - 3.3.0
+    - 3.4.0
+  - dependency-name: pytest
+    versions:
+    - 6.2.2
+  - dependency-name: isort
+    versions:
+    - 5.7.0
+  - dependency-name: bleach
+    versions:
+    - 3.1.4
